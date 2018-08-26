@@ -4,9 +4,12 @@
        xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
+    <context:annotation-config/>
+
     <bean class="quoters.InjectRandomIntAnnotationBeanPostProcessor"/>
 
-    <context:annotation-config/>
+    <bean class="quoters.ProfilingHandlerBeanPostProcessor"/>
+
 
     <bean class="quoters.TerminatorQuoter" id="terminatorQuoter">
         <property name="message" value="I'll be back"/>
